@@ -1,0 +1,54 @@
+﻿@model MVC_BP.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>Kreirajte svoj korisnički račun:</h1>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registracija</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Ime)
+                @Html.TextBoxFor(m => m.Ime)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Prezime)
+                @Html.TextBoxFor(m => m.Prezime)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.adresa)
+                @Html.TextBoxFor(m => m.adresa)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+            
+            <li>
+                @Html.LabelFor(m => m.BrojTel)
+                @Html.TextBoxFor(m => m.BrojTel)
+            </li>
+            
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
