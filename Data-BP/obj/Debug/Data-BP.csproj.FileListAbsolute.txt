@@ -1,0 +1,8 @@
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\Data-BP.dll.config
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\Data-BP.dll
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\Data-BP.pdb
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\EntityFramework.dll
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\EntityFramework.xml
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.csprojResolveAssemblyReference.cache
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.dll
+C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.pdb

@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC-BP", "MVC-BP\MVC-BP.csproj", "{039065D8-4409-405D-87DB-946E90B27E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data-BP", "Data-BP\Data-BP.csproj", "{7629CC1E-C3D8-446B-A473-B6F5A733B649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API-BP", "API-BP\API-BP.csproj", "{A6D32043-6FF8-4B27-A18B-006958853C72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{039065D8-4409-405D-87DB-946E90B27E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{039065D8-4409-405D-87DB-946E90B27E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{039065D8-4409-405D-87DB-946E90B27E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7629CC1E-C3D8-446B-A473-B6F5A733B649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7629CC1E-C3D8-446B-A473-B6F5A733B649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7629CC1E-C3D8-446B-A473-B6F5A733B649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7629CC1E-C3D8-446B-A473-B6F5A733B649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D32043-6FF8-4B27-A18B-006958853C72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D32043-6FF8-4B27-A18B-006958853C72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D32043-6FF8-4B27-A18B-006958853C72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D32043-6FF8-4B27-A18B-006958853C72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

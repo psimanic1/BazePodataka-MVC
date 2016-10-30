@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RentacarModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="RentacarModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="RentacarModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Uposlenici" EntityType="RentacarModel.Store.Uposlenici" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Uposlenici">
+    <Key>
+      <PropertyRef Name="IDUposlenika" />
+    </Key>
+    <Property Name="IDUposlenika" Type="int" Nullable="false" />
+    <Property Name="Ime" Type="varchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="varchar(max)" Nullable="false" />
+    <Property Name="Username" Type="varchar(max)" Nullable="false" />
+    <Property Name="Sifra" Type="varchar(max)" Nullable="false" />
+    <Property Name="TipKorisnika" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>
