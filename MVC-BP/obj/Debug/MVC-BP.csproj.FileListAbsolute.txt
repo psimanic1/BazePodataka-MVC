@@ -47,3 +47,105 @@ c:\users\predrag\documents\visual studio 2012\Projects\MVC-BP\MVC-BP\bin\DotNetO
 c:\users\predrag\documents\visual studio 2012\Projects\MVC-BP\MVC-BP\obj\Debug\MVC-BP.csprojResolveAssemblyReference.cache
 c:\users\predrag\documents\visual studio 2012\Projects\MVC-BP\MVC-BP\obj\Debug\MVC-BP.dll
 c:\users\predrag\documents\visual studio 2012\Projects\MVC-BP\MVC-BP\obj\Debug\MVC-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\MVC-BP.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\MVC-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Antlr3.Runtime.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.Core.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\EntityFramework.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Newtonsoft.Json.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Net.Http.Formatting.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Helpers.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.WebHost.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Mvc.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Optimization.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Razor.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\WebGrease.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\WebMatrix.Data.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\WebMatrix.WebData.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\EntityFramework.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Newtonsoft.Json.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Net.Http.Formatting.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Helpers.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.WebHost.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Mvc.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.Razor.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\WebMatrix.Data.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\WebMatrix.WebData.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.Core.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.csprojResolveAssemblyReference.cache
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Model-BP.exe
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\MVC-BP\bin\Model-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\MVC-BP.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\MVC-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Antlr3.Runtime.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.Core.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\EntityFramework.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Model-BP.exe
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Newtonsoft.Json.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Net.Http.Formatting.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Helpers.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.WebHost.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Mvc.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Optimization.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Razor.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Razor.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\WebGrease.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\WebMatrix.Data.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\WebMatrix.WebData.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Model-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Newtonsoft.Json.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Net.Http.Formatting.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Http.WebHost.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\EntityFramework.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Helpers.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Mvc.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.Razor.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\System.Web.WebPages.Razor.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\WebMatrix.Data.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\WebMatrix.WebData.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.Core.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.csprojResolveAssemblyReference.cache
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\MVC-BP\obj\Debug\MVC-BP.pdb

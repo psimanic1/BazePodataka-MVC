@@ -1,0 +1,11 @@
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.exe.config
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.exe
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Model-BP\obj\Debug\Model-BP.exe
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Model-BP\obj\Debug\Model-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.exe.config
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.exe
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\bin\Debug\Model-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\obj\Debug\Model-BP.exe
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\obj\Debug\Model-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\Model-BP\obj\Debug\Model-BP.csprojResolveAssemblyReference.cache

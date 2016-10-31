@@ -3,6 +3,39 @@
   <EntityContainer Name="RentacarEntities" p1:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="RentacarModel.sysdiagrams" />
     <EntitySet Name="Uposlenici" EntityType="RentacarModel.Uposlenici" />
+    <EntitySet Name="Korisnik" EntityType="RentacarModel.Korisnik" />
+    <EntitySet Name="Lokacija" EntityType="RentacarModel.Lokacija" />
+    <EntitySet Name="Rezervacija" EntityType="RentacarModel.Rezervacija" />
+    <EntitySet Name="Vozila" EntityType="RentacarModel.Vozila" />
+    <EntitySet Name="Vrijeme" EntityType="RentacarModel.Vrijeme" />
+    <AssociationSet Name="FK_Rezervacija_Korisnik" Association="RentacarModel.FK_Rezervacija_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Lokacija" Association="RentacarModel.FK_Rezervacija_Lokacija">
+      <End Role="Lokacija" EntitySet="Lokacija" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Uposlenici" Association="RentacarModel.FK_Rezervacija_Uposlenici">
+      <End Role="Uposlenici" EntitySet="Uposlenici" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Vozila" Association="RentacarModel.FK_Rezervacija_Vozila">
+      <End Role="Vozila" EntitySet="Vozila" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Vrijeme" Association="RentacarModel.FK_Rezervacija_Vrijeme">
+      <End Role="Vrijeme" EntitySet="Vrijeme" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <EntitySet Name="UserProfile" EntityType="RentacarModel.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="RentacarModel.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="RentacarModel.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="RentacarModel.webpages_Roles" />
+    <AssociationSet Name="webpages_UsersInRoles" Association="RentacarModel.webpages_UsersInRoles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -19,10 +52,178 @@
       <PropertyRef Name="IDUposlenika" />
     </Key>
     <Property Name="IDUposlenika" Type="Int32" Nullable="false" />
-    <Property Name="Ime" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="Prezime" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="Sifra" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-    <Property Name="TipKorisnika" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Ime" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Prezime" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Sifra" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TipKorisnika" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rezervacija" Relationship="RentacarModel.FK_Rezervacija_Uposlenici" FromRole="Uposlenici" ToRole="Rezervacija" />
   </EntityType>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="IDKorisnika" />
+    </Key>
+    <Property Type="Int32" Name="IDKorisnika" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BrojTelefona" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Sifra" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Adresa" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Admin" Nullable="false" />
+    <NavigationProperty Name="Rezervacija" Relationship="RentacarModel.FK_Rezervacija_Korisnik" FromRole="Korisnik" ToRole="Rezervacija" />
+  </EntityType>
+  <EntityType Name="Lokacija">
+    <Key>
+      <PropertyRef Name="IDLokacija" />
+    </Key>
+    <Property Type="Int32" Name="IDLokacija" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdresaPocetka" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AdresaVracanja" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rezervacija" Relationship="RentacarModel.FK_Rezervacija_Lokacija" FromRole="Lokacija" ToRole="Rezervacija" />
+  </EntityType>
+  <EntityType Name="Rezervacija">
+    <Key>
+      <PropertyRef Name="IDRezervacija" />
+    </Key>
+    <Property Type="Int32" Name="IDRezervacija" Nullable="false" />
+    <Property Type="Int32" Name="IDKorisnika" Nullable="false" />
+    <Property Type="Int32" Name="IDVozila" Nullable="false" />
+    <Property Type="Int32" Name="IDLokacija" Nullable="false" />
+    <Property Type="Int32" Name="IDVrijemeRezervacije" Nullable="false" />
+    <Property Type="Int32" Name="IDUposlenika" Nullable="false" />
+    <NavigationProperty Name="Korisnik" Relationship="RentacarModel.FK_Rezervacija_Korisnik" FromRole="Rezervacija" ToRole="Korisnik" />
+    <NavigationProperty Name="Lokacija" Relationship="RentacarModel.FK_Rezervacija_Lokacija" FromRole="Rezervacija" ToRole="Lokacija" />
+    <NavigationProperty Name="Uposlenici" Relationship="RentacarModel.FK_Rezervacija_Uposlenici" FromRole="Rezervacija" ToRole="Uposlenici" />
+    <NavigationProperty Name="Vozila" Relationship="RentacarModel.FK_Rezervacija_Vozila" FromRole="Rezervacija" ToRole="Vozila" />
+    <NavigationProperty Name="Vrijeme" Relationship="RentacarModel.FK_Rezervacija_Vrijeme" FromRole="Rezervacija" ToRole="Vrijeme" />
+  </EntityType>
+  <EntityType Name="Vozila">
+    <Key>
+      <PropertyRef Name="IDVozila" />
+    </Key>
+    <Property Type="Int32" Name="IDVozila" Nullable="false" />
+    <Property Type="String" Name="Naziv" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Slika" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="Detalji" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Cijena" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Dostupnost" Nullable="false" />
+    <NavigationProperty Name="Rezervacija" Relationship="RentacarModel.FK_Rezervacija_Vozila" FromRole="Vozila" ToRole="Rezervacija" />
+  </EntityType>
+  <EntityType Name="Vrijeme">
+    <Key>
+      <PropertyRef Name="IDVrijeme" />
+    </Key>
+    <Property Type="Int32" Name="IDVrijeme" Nullable="false" />
+    <Property Type="DateTime" Name="VrijemePocetka" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="VrijemeZavrsetka" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="VrijemeVracanja" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Rezervacija" Relationship="RentacarModel.FK_Rezervacija_Vrijeme" FromRole="Vrijeme" ToRole="Rezervacija" />
+  </EntityType>
+  <Association Name="FK_Rezervacija_Korisnik">
+    <End Type="RentacarModel.Korisnik" Role="Korisnik" Multiplicity="1" />
+    <End Type="RentacarModel.Rezervacija" Role="Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="IDKorisnika" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDKorisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Lokacija">
+    <End Type="RentacarModel.Lokacija" Role="Lokacija" Multiplicity="1" />
+    <End Type="RentacarModel.Rezervacija" Role="Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lokacija">
+        <PropertyRef Name="IDLokacija" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Uposlenici">
+    <End Type="RentacarModel.Uposlenici" Role="Uposlenici" Multiplicity="1" />
+    <End Type="RentacarModel.Rezervacija" Role="Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uposlenici">
+        <PropertyRef Name="IDUposlenika" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDUposlenika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Vozila">
+    <End Type="RentacarModel.Vozila" Role="Vozila" Multiplicity="1" />
+    <End Type="RentacarModel.Rezervacija" Role="Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozila">
+        <PropertyRef Name="IDVozila" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDVozila" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Vrijeme">
+    <End Type="RentacarModel.Vrijeme" Role="Vrijeme" Multiplicity="1" />
+    <End Type="RentacarModel.Rezervacija" Role="Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vrijeme">
+        <PropertyRef Name="IDVrijeme" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDVrijemeRezervacije" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="56" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="webpages_Roles" Relationship="RentacarModel.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="String" Name="ConfirmationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsConfirmed" />
+    <Property Type="DateTime" Name="LastPasswordFailureDate" Precision="3" />
+    <Property Type="Int32" Name="PasswordFailuresSinceLastSuccess" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PasswordChangedDate" Precision="3" />
+    <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordVerificationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PasswordVerificationTokenExpirationDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Type="String" Name="Provider" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProviderUserId" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserProfile" Relationship="RentacarModel.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="webpages_UsersInRoles">
+    <End Type="RentacarModel.webpages_Roles" Role="webpages_Roles" Multiplicity="*" />
+    <End Type="RentacarModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+  </Association>
 </Schema>

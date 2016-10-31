@@ -7,6 +7,21 @@
       <Diagram DiagramId="0ce4dd9344494db3ab9937124902a4b1" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="RentacarModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="RentacarModel.Uposlenici" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentacarModel.Korisnik" Width="1.5" PointX="2.8941219797796207" PointY="29.744003890894355" />
+        <EntityTypeShape EntityType="RentacarModel.Lokacija" Width="1.5" PointX="5.2820556411901753" PointY="6.7607143999825761" />
+        <EntityTypeShape EntityType="RentacarModel.Rezervacija" Width="1.5" PointX="2.7753888623674348" PointY="23.74214174958977" />
+        <EntityTypeShape EntityType="RentacarModel.Vozila" Width="1.5" PointX="7.6588518934598433" PointY="27.370387954344221" />
+        <EntityTypeShape EntityType="RentacarModel.Vrijeme" Width="1.5" PointX="8.7620598342093" PointY="12.116745969334964" />
+        <AssociationConnector Association="RentacarModel.FK_Rezervacija_Korisnik" />
+        <AssociationConnector Association="RentacarModel.FK_Rezervacija_Lokacija" />
+        <AssociationConnector Association="RentacarModel.FK_Rezervacija_Uposlenici" />
+        <AssociationConnector Association="RentacarModel.FK_Rezervacija_Vozila" />
+        <AssociationConnector Association="RentacarModel.FK_Rezervacija_Vrijeme" />
+        <EntityTypeShape EntityType="RentacarModel.UserProfile" Width="1.5" PointX="10.877409249021397" PointY="13.199349111504549" />
+        <EntityTypeShape EntityType="RentacarModel.webpages_Membership" Width="1.5" PointX="1.484053295796762" PointY="8.4155866989938488" />
+        <EntityTypeShape EntityType="RentacarModel.webpages_OAuthMembership" Width="1.5" PointX="11.09529815199566" PointY="24.597852092514678" />
+        <EntityTypeShape EntityType="RentacarModel.webpages_Roles" Width="1.5" PointX="0.34819365681530612" PointY="21.71606170652251" />
+        <AssociationConnector Association="RentacarModel.webpages_UsersInRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

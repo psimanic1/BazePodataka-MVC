@@ -10,6 +10,9 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using MVC_BP.Filters;
 using MVC_BP.Models;
+using System.Net.Http;
+using Model_BP;
+using MVC_BP.Includes;
 
 namespace MVC_BP.Controllers
 {
@@ -69,6 +72,7 @@ namespace MVC_BP.Controllers
         //
         // POST: /Account/Register
 
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -79,9 +83,36 @@ namespace MVC_BP.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
-                    WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+
+                    using (var client = new HttpClient())
+                    {
+                        var kor = new KorisnikDTO()
+                        {
+                            ImeDTO = model.Ime,
+                            AdresaDTO=model.adresa,
+                            BrojTelefonaDTO=model.BrojTel,
+                            PrezimeDTO=model.Prezime,
+                            SifraDTO=model.Password,
+                            UsernameDTO=model.UserName
+                        };
+
+                        HttpResponseMessage response = client.PostAsJsonAsync<KorisnikDTO>(DefaultAPI.GetPath("Korisnik/Register").ToString(), kor).Result;
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var rez = response.Content.ReadAsAsync<bool>().Result;
+                            if (rez != false)
+                            {
+                                WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
+                                WebSecurity.Login(model.UserName, model.Password);
+                                return RedirectToAction("Index", "Home");                                
+                            }
+                            response.Dispose();
+                            response = client.PostAsJsonAsync<KorisnikDTO>(DefaultAPI.GetPath("Korisnik/Obrisi").ToString(), kor).Result;
+                            ModelState.AddModelError("","Greska");
+                        }
+                    }
+                   
                 }
                 catch (MembershipCreateUserException e)
                 {

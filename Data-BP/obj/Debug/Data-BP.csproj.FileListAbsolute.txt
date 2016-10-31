@@ -6,3 +6,18 @@ C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\bin\Debug\
 C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.csprojResolveAssemblyReference.cache
 C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.dll
 C:\Users\Predrag\documents\visual studio 2012\Projects\MVC-BP\Data-BP\obj\Debug\Data-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.dll.config
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.pdb
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\bin\Debug\EntityFramework.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\bin\Debug\EntityFramework.xml
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\obj\Debug\Data-BP.csprojResolveAssemblyReference.cache
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\obj\Debug\Data-BP.dll
+C:\Users\Predrag\Documents\Visual Studio 2012\Projects\BazePodataka-MVC\Data-BP\obj\Debug\Data-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.dll.config
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\bin\Debug\Data-BP.pdb
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\bin\Debug\EntityFramework.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\bin\Debug\EntityFramework.xml
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\obj\Debug\Data-BP.dll
+C:\Users\Enver\Desktop\BazePodataka-MVC\Data-BP\obj\Debug\Data-BP.pdb

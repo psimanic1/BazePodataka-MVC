@@ -27,5 +27,14 @@ namespace Data_BP
     
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Uposlenici> Uposlenici { get; set; }
+        public DbSet<Korisnik> Korisnik { get; set; }
+        public DbSet<Lokacija> Lokacija { get; set; }
+        public DbSet<Rezervacija> Rezervacija { get; set; }
+        public DbSet<Vozila> Vozila { get; set; }
+        public DbSet<Vrijeme> Vrijeme { get; set; }
+        public DbSet<UserProfile> UserProfile { get; set; }
+        public DbSet<webpages_Membership> webpages_Membership { get; set; }
+        public DbSet<webpages_OAuthMembership> webpages_OAuthMembership { get; set; }
+        public DbSet<webpages_Roles> webpages_Roles { get; set; }
     }
 }

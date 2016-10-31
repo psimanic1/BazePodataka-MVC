@@ -1,9 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="RentacarModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="RentacarModelStoreContainer">
+    <EntitySet Name="Korisnik" EntityType="RentacarModel.Store.Korisnik" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lokacija" EntityType="RentacarModel.Store.Lokacija" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rezervacija" EntityType="RentacarModel.Store.Rezervacija" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="sysdiagrams" EntityType="RentacarModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Uposlenici" EntityType="RentacarModel.Store.Uposlenici" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfile" EntityType="RentacarModel.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vozila" EntityType="RentacarModel.Store.Vozila" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vrijeme" EntityType="RentacarModel.Store.Vrijeme" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="RentacarModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="RentacarModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="RentacarModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="RentacarModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Rezervacija_Korisnik" Association="RentacarModel.Store.FK_Rezervacija_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Lokacija" Association="RentacarModel.Store.FK_Rezervacija_Lokacija">
+      <End Role="Lokacija" EntitySet="Lokacija" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Uposlenici" Association="RentacarModel.Store.FK_Rezervacija_Uposlenici">
+      <End Role="Uposlenici" EntitySet="Uposlenici" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Vozila" Association="RentacarModel.Store.FK_Rezervacija_Vozila">
+      <End Role="Vozila" EntitySet="Vozila" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervacija_Vrijeme" Association="RentacarModel.Store.FK_Rezervacija_Vrijeme">
+      <End Role="Vrijeme" EntitySet="Vrijeme" />
+      <End Role="Rezervacija" EntitySet="Rezervacija" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="RentacarModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="RentacarModel.Store.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="IDKorisnika" />
+    </Key>
+    <Property Name="IDKorisnika" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="varchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="varchar(max)" Nullable="false" />
+    <Property Name="BrojTelefona" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sifra" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adresa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Admin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lokacija">
+    <Key>
+      <PropertyRef Name="IDLokacija" />
+    </Key>
+    <Property Name="IDLokacija" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdresaPocetka" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdresaVracanja" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rezervacija">
+    <Key>
+      <PropertyRef Name="IDRezervacija" />
+    </Key>
+    <Property Name="IDRezervacija" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDKorisnika" Type="int" Nullable="false" />
+    <Property Name="IDVozila" Type="int" Nullable="false" />
+    <Property Name="IDLokacija" Type="int" Nullable="false" />
+    <Property Name="IDVrijemeRezervacije" Type="int" Nullable="false" />
+    <Property Name="IDUposlenika" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -18,11 +89,162 @@
     <Key>
       <PropertyRef Name="IDUposlenika" />
     </Key>
-    <Property Name="IDUposlenika" Type="int" Nullable="false" />
-    <Property Name="Ime" Type="varchar(max)" Nullable="false" />
-    <Property Name="Prezime" Type="varchar(max)" Nullable="false" />
-    <Property Name="Username" Type="varchar(max)" Nullable="false" />
-    <Property Name="Sifra" Type="varchar(max)" Nullable="false" />
-    <Property Name="TipKorisnika" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDUposlenika" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prezime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sifra" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TipKorisnika" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+  </EntityType>
+  <EntityType Name="Vozila">
+    <Key>
+      <PropertyRef Name="IDVozila" />
+    </Key>
+    <Property Name="IDVozila" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Slika" Type="image" Nullable="false" />
+    <Property Name="Detalji" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cijena" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Dostupnost" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vrijeme">
+    <Key>
+      <PropertyRef Name="IDVrijeme" />
+    </Key>
+    <Property Name="IDVrijeme" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VrijemePocetka" Type="datetime" Nullable="false" />
+    <Property Name="VrijemeZavrsetka" Type="datetime" Nullable="false" />
+    <Property Name="VrijemeVracanja" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Rezervacija_Korisnik">
+    <End Role="Korisnik" Type="RentacarModel.Store.Korisnik" Multiplicity="1" />
+    <End Role="Rezervacija" Type="RentacarModel.Store.Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="IDKorisnika" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDKorisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Lokacija">
+    <End Role="Lokacija" Type="RentacarModel.Store.Lokacija" Multiplicity="1" />
+    <End Role="Rezervacija" Type="RentacarModel.Store.Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lokacija">
+        <PropertyRef Name="IDLokacija" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDLokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Uposlenici">
+    <End Role="Uposlenici" Type="RentacarModel.Store.Uposlenici" Multiplicity="1" />
+    <End Role="Rezervacija" Type="RentacarModel.Store.Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uposlenici">
+        <PropertyRef Name="IDUposlenika" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDUposlenika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Vozila">
+    <End Role="Vozila" Type="RentacarModel.Store.Vozila" Multiplicity="1" />
+    <End Role="Rezervacija" Type="RentacarModel.Store.Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vozila">
+        <PropertyRef Name="IDVozila" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDVozila" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervacija_Vrijeme">
+    <End Role="Vrijeme" Type="RentacarModel.Store.Vrijeme" Multiplicity="1" />
+    <End Role="Rezervacija" Type="RentacarModel.Store.Rezervacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vrijeme">
+        <PropertyRef Name="IDVrijeme" />
+      </Principal>
+      <Dependent Role="Rezervacija">
+        <PropertyRef Name="IDVrijemeRezervacije" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="RentacarModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="RentacarModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="RentacarModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="RentacarModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

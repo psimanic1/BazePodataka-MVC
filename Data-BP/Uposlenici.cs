@@ -14,11 +14,18 @@ namespace Data_BP
     
     public partial class Uposlenici
     {
+        public Uposlenici()
+        {
+            this.Rezervacija = new HashSet<Rezervacija>();
+        }
+    
         public int IDUposlenika { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string Username { get; set; }
         public string Sifra { get; set; }
         public string TipKorisnika { get; set; }
+    
+        public virtual ICollection<Rezervacija> Rezervacija { get; set; }
     }
 }
